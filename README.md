@@ -25,19 +25,32 @@ We have a React Photo Library. We want the App to show us a collection of all ph
 
 * Fetch the data from http://localhost:3000/photos
 * Render each photo with the PhotoCard component.
-* Each photo card will have button that says Add to Favorites, when clicked, will add to the favorites collection (i.e it should be rendered in the FavoritePhotosContainer component). The button text should change to Already in Favorites with the button being disabled. This can accomplished by adding a `disabled ` attribute to the button element.
+* Each photo card will have button that says
+
+<!-- Add to Favorites, when clicked, will add to the favorites collection (i.e it should be rendered in the FavoritePhotosContainer component). -->
+
+The button text should change to Already in Favorites with the button being disabled. This can accomplished by adding a `disabled ` attribute to the button element.
 ```
    <button disabled className="ui button blue">Already in Favorites</button>
 ```
-* In the `Header` component, we have a div (button) of "All Photos", "Favorites", and "Add New Photo". By default, when the page loads, All Photos container should render with the collection of all photos fetched from the database. When Favorites is clicked, the `FavoritePhotosContainer` component should render with only the photos that were favorited. When Add New Photo is clicked, the `AddNewPhotoForm` should render.
 
-* In the `FavoritePhotosContainer`, the `PhotoCard` generated should have a button with the text "Remove from Favorites". When this button is clicked, it should remove the specific photo from the favorites collection.
+<!--
+* In the `Header` component, we have a div (button) of
 
-* In the `AddNewPhotoForm`, when the form is submitted, a new photo is stored in the collection of all photos. (You might have to get creative if you're working with the ID)
+"All Photos", "Favorites", and "Add New Photo".
 
-### BONUS 
+By default, when the page loads, All Photos container should render with the collection of all photos fetched from the database. -->
+
+<!-- When Favorites is clicked, the `FavoritePhotosContainer` component should render with only the photos that were favorited. -->
+
+ <!-- When Add New Photo is clicked, the `AddNewPhotoForm` should render. -->
+<!--
+* In the `FavoritePhotosContainer`, the `PhotoCard` generated should have a button with the text "Remove from Favorites". When this button is clicked, it should remove the specific photo from the favorites collection. -->
+
+<!-- * In the `AddNewPhotoForm`, when the form is submitted, a new photo is stored in the collection of all photos. (You might have to get creative if you're working with the ID) -->
+
+### BONUS
 
 * Incorporate a `SearchBarComponent` under `PhotoContainer`. The goal is to `filter` out the photos whose author matches what is being typed. This should be dynamic. (i.e As I am typing, the photos in the container are immediately filtered)
 
 * Notice that `PhotoContainer` and `FavoritePhotosContainer` seem pretty redundant. Any way we can reuse just one component?
-

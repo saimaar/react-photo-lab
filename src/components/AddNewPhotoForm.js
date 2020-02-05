@@ -7,8 +7,16 @@ export default class AddNewPhotoForm extends Component {
         download_url: ""
     }
 
-    handleOnSubmit = () => {
+    handleOnChange=(evt)=>{
+      let {name, value} = evt.target
+      this.setState({
+        [name]: value
+      })
+    }
 
+    handleOnSubmit = (evt) => {
+      evt.preventDefault()
+      this.props.addNewPhoto(this.state)
     }
 
     render() {
@@ -24,9 +32,9 @@ export default class AddNewPhotoForm extends Component {
                     <label>Image URL</label>
                     <input type="text" name="download_url" required onChange={this.handleOnChange} value={this.state.download_url} placeholder="Photo URL"/>
                 </div>
-    
+
                 <button className="ui button" type="submit">Submit</button>
-            </form>  
+            </form>
         </div>
         );
     }
